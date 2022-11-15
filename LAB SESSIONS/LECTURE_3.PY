@@ -99,3 +99,77 @@ polyfunc = np.poly1d(coeffs)
 trendline = polyfunc(calcium_T)
 print(f'The value of the half-life of Calcium-14 obtained from the straight line graph was found to be: {-np.log(2)/coeffs[0]:.2E}s')
 
+#setting the parameters for the plots and subplots to be plotted 
+F, (A_0, A_1) = plt.subplots(2, 1, sharex=True, sharey=False, figsize=(7.3, 10.7))
+
+plt.rcParams['font.family'] = 'STIXGeneral'
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.size'] = 12
+plt.rcParams['font.weight'] = 'normal'
+a0.scatter(calcium_T, (calcium_A/calcium_A[0]), color='k', label='Data Points')
+a0.plot(calcium_T, fitted_line, color='k', label='Trendline')
+a0.minorticks_on()
+a0.grid(visible=True, which='major', linestyle='-')
+a0.grid(visible=True, which='minor', linestyle='--')
+a0.set_xlabel('Time/s')
+a0.set_ylabel('A/A0')
+a0.set_title(r'A graph $\frac{A}{A_0}$ vs Time')
+
+a1.scatter(calcium_T, calcium_log_A, color='k', label='Data Point')
+a1.plot(calcium_T, trendline, color='k', label='Trendline')
+a1.minorticks_on()
+a1.grid(visible=True, which='major', linestyle='-')
+a1.grid(visible=True, which='minor', linestyle='--')
+a1.set_xlabel('Time/s')
+a1.set_ylabel(r'$log(A)$')
+a1.set_title(r'A graph of $log(A)$ vs Time')
+
+f.tight_layout()
+f.legend()
+f.savefig('PLOT2.png', dpi=800)
+
+plt.close()
+
+data_2_T = data_2['t/s']
+data_2_A = data_2['A']
+
+selection = np.arange(0, len(data_2['t/s']), 20)
+
+#making use of the curve fit function across the data 
+for i in range(len(selection)-1):
+    data_A = data_A[selection[i]:selection[i+1]]
+    data_T = data_2_T[selection[i]:selection[i+1]]
+    data_0 = data_A[selection[i]]
+    data__0 = data_A / data_0
+    popt, pcov = curve_fit(fit_func, data_T, data__0)
+    half_life.append(popt[0])
+    Z.append(data_2['z'][selection[i]])
+    N.append(data_2['n'][selection[i]])
+
+#combining all 3 different lists together and creating a data frame for the values of z, n and the half life 
+plotting = list(zip(Z, N, half_life))
+results = pd.DataFrame({'Z':Z, 'N':N, 'Half Life/s':half_life})
+plot = results.pivot(index = 'Z', columns = 'N', values = 'Half Life/s')
+
+#creating the parameters and plotting the graphs 
+plt.rcParams['font.family'] = 'STIXGeneral'
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.size'] = 12
+plt.rcParams['font.weight'] = 'normal'
+
+heat_map = sns.heatmap(plot, square=True, norm=LogNorm())
+heat_map.invert_yaxis()
+
+#indexing for when Z=N and selecting the data for when Z=N
+for i in range(len(results)):
+    if results['Z'][i] == results['N'][i]:
+        new.append(i)
+for i in new:
+    new_Z.append(Z[i])
+    new_N.append(N[i])
+
+Z_N = pd.DataFrame({'Z': new_Z, 'N':new_N})
+
+#to plot the data and save the plot produced 
+plt.plot(Z_N['N'], Z_N['Z'], color='k')
+plt.savefig('PLOT3.png', dpi=800)
