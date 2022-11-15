@@ -120,4 +120,3 @@ plt.show()
 
 #to show the Boltzmann constant 
 print(f'Boltzmann constant = {popt[0]:.2E}')
-
