@@ -82,6 +82,8 @@ radius = np.average(diameter)
 m_constant = (8*np.pi*(radius**2))/(9.81*(L[0]**3))
 c_constant = 4/(L[0]*9.81)
 
+print(m_constant, c_constant)
+
 #obtaining the best fit line 
 coeffs, cov = np.polyfit(x_i, ye_array, 1, cov=True)
 polyfunc = np.poly1d(coeffs)
