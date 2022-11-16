@@ -69,6 +69,8 @@ def beta_alpha_function(x_i, x_bar, y_i, y_bar):
 #to obtain the actual values 
 beta, alpha, delta_beta, delta_alpha, r, R = beta_alpha_function(x_i, x_bar, y_i, y_bar)
 
+print(beta, alpha, delta_beta, delta_alpha, r, R)
+
 #to obtain a value for the experimental value 
 for i in range(len(x_i)):
     ye = alpha + (beta*x_i[i])
@@ -94,6 +96,7 @@ print(E, delta_E, T0, delta_T0)
 
 #obtaining a value for the residual 
 residual = np.subtract(y_i,trendline)
+print(residual)
 
 F, (A_0, A_1) = plt.subplots(2, 1, sharex=True, sharey=False, gridspec_kw={'height_ratios': [3, 1]}, figsize=(7.3, 10.7))
 
