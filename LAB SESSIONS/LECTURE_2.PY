@@ -28,15 +28,15 @@ plt.grid(visible=True, which='minor', linestyle='--')
 plt.tight_layout()
 
 plt.scatter((data_1['Temperature/K']),(data_1['Luminosity(L/Lo)']), color = 'k')
-plt.savefig('PLOT1.png', dpi=800)
+plt.savefig('PLOT1_2.png', dpi=800)
 
 plt.scatter(np.log(data_1['Temperature/K']), np.log(data_1['Luminosity(L/Lo)']), color = 'k')
-plt.savefig('PLOT2.png', dpi=800)
+plt.savefig('PLOT2_2.png', dpi=800)
 
 #to drop any of the unwanted values 
 value3 = data_1.mask(data_1['Star type']!=3).dropna().reset_index()
 plt.scatter(np.log(value3['Temperature/K']), np.log(value3['Luminosity(L/Lo)']), color = 'k')
-plt.savefig('PLOT3.png', dpi=800)
+plt.savefig('PLOT3_2.png', dpi=800)
 
 #to get the log of the data needed 
 y = np.log(value3['Luminosity(L/Lo)'])
@@ -107,7 +107,7 @@ plt.grid(visible=True, which='major', linestyle='-')
 plt.grid(visible=True, which='minor', linestyle='--')
 plt.xlabel(r'T/K')
 plt.ylabel(r'$\frac{\mathrm{L}}{\mathrm{A}}$ /Wm$^{-2}$')
-plt.savefig('PLOT5.png', dpi=800)
+plt.savefig('PLOT5_2.png', dpi=800)
 plt.show()
 
 #to show the Boltzmann constant 

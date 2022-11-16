@@ -71,7 +71,7 @@ plt.grid(visible=True, which='major', linestyle='-')
 plt.grid(visible=True, which='minor', linestyle='--')
 plt.tight_layout()
 plt.scatter(np.log(mean_T), np.log(mean_UA), color='k')
-plt.savefig('PLOT1.png', dpi=800)
+plt.savefig('PLOT1_3.png', dpi=800)
 
 plt.close()
 
@@ -126,7 +126,7 @@ A_1.set_title(r'A graph of $log(A)$ vs Time')
 
 F.tight_layout()
 F.legend()
-F.savefig('PLOT2.png', dpi=800)
+F.savefig('PLOT2_3.png', dpi=800)
 
 plt.close()
 
@@ -172,4 +172,4 @@ Z_N = pd.DataFrame({'Z': new_Z, 'N':new_N})
 
 #to plot the data and save the plot produced 
 plt.plot(Z_N['N'], Z_N['Z'], color='k')
-plt.savefig('PLOT3.png', dpi=800)
+plt.savefig('PLOT3_3.png', dpi=800)

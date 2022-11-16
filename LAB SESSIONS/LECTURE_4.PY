@@ -85,7 +85,7 @@ A_3.plot(CALLISTO_lin, fitted_callisto, '--', color='k', label='Callisto Fit')
 A_3.legend()
 
 f.tight_layout()
-f.savefig('PLOT1.png', dpi=800)
+f.savefig('PLOT1_4.png', dpi=800)
 plt.show()
 
 plt.close()
@@ -135,7 +135,7 @@ plt.plot(X, fit_line, '-', color='k')
 plt.ylabel(r'r$^3$/m$^3$')
 plt.xlabel(r'T$^2$/s$^2$')
 plt.title(r'A Graph of r$^3$ vs T$^2$')
-plt.savefig('PLOT2.png', dpi=800)
+plt.savefig('PLOT2_4.png', dpi=800)
 plt.show()
 
 # determining the gradient of the straight line and the gradient error
@@ -150,4 +150,4 @@ mass_jupiter = (4*(np.pi**2)*grad)/G
 delta_mass_jupiter = np.sqrt(((4*(np.pi**2))/G)*(grad_error))
 precision_jupiter = abs(((mass_jupiter/real_mass_jupiter)-1)*100)
 # displaying the results
-print(f'The mass of jupiter is: {jupiter_mass:.2E}kg ± {delta_mass_jupiter:.2E} an precision of {precision_jupiter:.2f}%')
+print(f'The mass of jupiter was found to be: {jupiter_mass:.2E}kg ± {delta_mass_jupiter:.2E} with a precision of: {precision_jupiter:.2f}%')
