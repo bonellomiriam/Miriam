@@ -58,8 +58,8 @@ A_uvalues = data_2['A']
 T_values = data_2['t/s']
 
 #to find the mean values for A and t of each isotope 
-mean_UA = [np.mean(A_uvalues.iloc[index[i]:index[i+1]]) for i in range(len(index)-1)]
-mean_T = [np.mean(T_values.iloc[index[i]:index[i+1]]) for i in range(len(index)-1)]
+mean_UA = [np.mean(A_uvalues.iloc[index_arr[i]:index_arr[i+1]]) for i in range(len(index_arr)-1)]
+mean_T = [np.mean(T_values.iloc[index_arr[i]:index_arr[i+1]]) for i in range(len(index_arr)-1)]
 
 #setting the parameters to plot the graphs
 plt.figure(figsize=(7.5, 10.5))
@@ -74,17 +74,16 @@ plt.tight_layout()
 plt.scatter(np.log(mean_T), np.log(mean_UA), color='k')
 plt.savefig('PLOT1_3.png', dpi=800)
 
-plt.close()
 
 #selecting the specific data for calcium and for 1 calcium isotope and then re indexing the data 
-calcium_data_2 = data_2[data_2['z']==20]
-calcium_data_2 = data_2.iloc[5680:6080]
-calcium_data_2.reset_index(drop=True, inplace=True)
+calcium_df = df[df['z']==20]
+calcium_df = df.iloc[5680:6080]
+calcium_df.reset_index(drop=True, inplace=True)
 
 #setting the values and data used for calcium and defining the function to find the value of A/A0
-calcium_A = calcium_data_2['A'][0:20]
-calcium_log_A = np.log(calcium_data_2['A'][0:20])
-calcium_T = (calcium_data_2['t/s'][0:20])
+calcium_A = calcium_df['A'][0:20]
+calcium_log_A = np.log(calcium_df['A'][0:20])
+calcium_T = (calcium_df['t/s'][0:20])
 
 def fit_func(t, t_half):
     return(np.exp((-1 * t * np.log(2)) / t_half))
@@ -103,10 +102,6 @@ print(f'The value of the half-life of Calcium-14 obtained from the straight line
 #setting the parameters for the plots and subplots to be plotted 
 F, (A_0, A_1) = plt.subplots(2, 1, sharex=True, sharey=False, figsize=(7.3, 10.7))
 
-plt.rcParams['font.family'] = 'STIXGeneral'
-plt.rcParams['mathtext.fontset'] = 'stix'
-plt.rcParams['font.size'] = 12
-plt.rcParams['font.weight'] = 'normal'
 A_0.scatter(calcium_T, (calcium_A/calcium_A[0]), color='k', label='Data Points')
 A_0.plot(calcium_T, fitted_line, color='k', label='Trendline')
 A_0.minorticks_on()
@@ -129,34 +124,27 @@ F.tight_layout()
 F.legend()
 F.savefig('PLOT2_3.png', dpi=800)
 
-plt.close()
 
-data_2_T = data_2['t/s']
-data_2_A = data_2['A']
+data_2_T = df['t/s']
+data_2_A = df['A']
 
-selection = np.arange(0, len(data_2['t/s']), 20)
+selection = np.arange(0, len(df['t/s']), 20)
 
 #making use of the curve fit function across the data 
 for i in range(len(selection)-1):
-    data_A = data_A[selection[i]:selection[i+1]]
+    data_A = data_2_A[selection[i]:selection[i+1]]
     data_T = data_2_T[selection[i]:selection[i+1]]
     data_0 = data_A[selection[i]]
     data__0 = data_A / data_0
     popt, pcov = curve_fit(fit_func, data_T, data__0)
     half_life.append(popt[0])
-    Z.append(data_2['z'][selection[i]])
-    N.append(data_2['n'][selection[i]])
+    Z.append(df['z'][selection[i]])
+    N.append(df['n'][selection[i]])
 
 #combining all 3 different lists together and creating a data frame for the values of z, n and the half life 
 plotting = list(zip(Z, N, half_life))
 results = pd.DataFrame({'Z':Z, 'N':N, 'Half Life/s':half_life})
 plot = results.pivot(index = 'Z', columns = 'N', values = 'Half Life/s')
-
-#creating the parameters and plotting the graphs 
-plt.rcParams['font.family'] = 'STIXGeneral'
-plt.rcParams['mathtext.fontset'] = 'stix'
-plt.rcParams['font.size'] = 12
-plt.rcParams['font.weight'] = 'normal'
 
 heat_map = sns.heatmap(plot, square=True, norm=LogNorm())
 heat_map.invert_yaxis()
