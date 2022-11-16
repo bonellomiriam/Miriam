@@ -44,18 +44,18 @@ sliced_data = [data_1.iloc[slice[even_A[i]]:slice[odd_A[i]]] for i in range(len(
 
 #getting rid of the empty values as well as defining en empty data frame to be used later on
 sliced_data = list(filter(lambda df: not df.empty, sliced_data))
-data_2 = pd.DataFrame(columns=['z', 'n', 't/s', 'A'])
+df = pd.DataFrame(columns=['z', 'n', 't/s', 'A'])
 
 for i in range(len(sliced_data)):
-    temp_data_2 = pd.DataFrame(sliced_data[i], columns = ['z', 'n', 't/s', 'A'])
-    data_2 = pd.concat([data_2, temp_data_2]).reset_index(drop=True)
+    temp_df = pd.DataFrame(sliced_data[i], columns = ['z', 'n', 't/s', 'A'])
+    df = pd.concat([df, temp_df]).reset_index(drop=True)
 
 #creating an index of the new data frame and selecting the data for A and t only
-index_data_2 = np.arange(0, len(data_2), 1)
-data_2.reset_index(drop=True).set_index(index_data_2, inplace=True)
+index_df = np.arange(0, len(df), 1)
+df.reset_index(drop=True).set_index(index_df, inplace=True)
 
-A_uvalues = data_2['A']
-T_values = data_2['t/s']
+A_uvalues = df['A']
+T_values = df['t/s']
 
 #to find the mean values for A and t of each isotope 
 mean_UA = [np.mean(A_uvalues.iloc[index_arr[i]:index_arr[i+1]]) for i in range(len(index_arr)-1)]
