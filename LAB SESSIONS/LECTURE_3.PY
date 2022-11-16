@@ -26,10 +26,10 @@ odd_A = np.arange(1, 5921, 2)
 
 #importing the data and creating an index with the selected data 
 A_values = data_1['A']
-index = np.arange(0, len(A_values)+20, 20)
+index_arr = np.arange(0, len(A_values)+20, 20)
 
 #to obtain the mean values of A of each isotope as well as obtaining the 20 values of each isotope
-mean_A = [np.mean(A_values.iloc[index[i]:index[i+1]]) for i in range(len(index)-1)]
+mean_A = [np.mean(A_values.iloc[index_arr[i]:index_arr[i+1]]) for i in range(len(index_arr)-1)]
 
 #to see which values are lower than 95
 for i in range(len(mean_A)):
@@ -40,11 +40,12 @@ for i in range(len(mean_A)):
 for i in range(len(index)):
     slice.append((index[i]) * 20)
     slice.append((index[i]+1) * 20)
-sliced_data = [data.iloc[slice[even_A[i]]:slice[odd_A[i]]] for i in range(len(even_A)-1)]
+sliced_data = [data_1.iloc[slice[even_A[i]]:slice[odd_A[i]]] for i in range(len(even_A)-1)]
 
 #getting rid of the empty values as well as defining en empty data frame to be used later on
 sliced_data = list(filter(lambda df: not df.empty, sliced_data))
 data_2 = pd.DataFrame(columns=['z', 'n', 't/s', 'A'])
+
 for i in range(len(sliced_data)):
     temp_data_2 = pd.DataFrame(sliced_data[i], columns = ['z', 'n', 't/s', 'A'])
     data_2 = pd.concat([data_2, temp_data_2]).reset_index(drop=True)
@@ -57,8 +58,8 @@ A_uvalues = data_2['A']
 T_values = data_2['t/s']
 
 #to find the mean values for A and t of each isotope 
-mean_UA = [np.mean(A_uvalues.iloc[index[i]]:index[i+1]) for i in range(len(index)-1)]
-mean_T = [np.mean(T_values.iloc[index[i]]:index[i+1]) for i in range(len(index)-1)]
+mean_UA = [np.mean(A_uvalues.iloc[index[i]:index[i+1]]) for i in range(len(index)-1)]
+mean_T = [np.mean(T_values.iloc[index[i]:index[i+1]]) for i in range(len(index)-1)]
 
 #setting the parameters to plot the graphs
 plt.figure(figsize=(7.5, 10.5))

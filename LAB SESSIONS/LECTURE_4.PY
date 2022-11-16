@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import seaborn as sns
 
-data_1 = pd.read_csv('Q4__Galilean_Moon_Atrometric_Data.csv')
+data_1 = pd.read_csv('Q4__Galilean_Moon_Astrometric_Data.csv')
 
 #to import the data of each moon 
 IO_pos = data_1['Io_Offset (Jup Diameters)']
@@ -28,10 +28,10 @@ def wave_function(t, A, T):
     return A * np.sin(((2 * np.pi) / T) * t)
 
 #creating the curve fit 
-popt_IO, pcov_IO = curve_fit(wave_function, IO_hjd, IO_pos, p_0 = (max(IO_pos), 1.75))
+popt_IO, pcov_IO = curve_fit(wave_function, IO_hjd, IO_pos, p0 = (max(IO_pos), 1.75))
 fitted_IO = wave_function(IO_lin, popt_IO[0], popt_IO[1])
 
-popt_EUROPA, pcov_EUROPA = curve_fit(wave_function, EUROPA_hjd, EUROPA_pos, p_0 = (max(EUROPA_pos), 3.56))
+popt_EUROPA, pcov_EUROPA = curve_fit(wave_function, EUROPA_hjd, EUROPA_pos, p0 = (max(EUROPA_pos), 3.56))
 fitted_EUROPA = wave_function(EUROPA_lin, popt_EUROPA[0], popt_EUROPA[1])
 
 popt_GANYMEDE, pcov_GANYMEDE = curve_fit(wave_function, GANYMEDE_hjd, GANYMEDE_pos, p0=(max(GANYMEDE_pos), 7.15))
@@ -84,8 +84,8 @@ A_3.scatter(CALLISTO_hjd, CALLISTO_pos, marker='^', color='k', label='Callisto')
 A_3.plot(CALLISTO_lin, fitted_callisto, '--', color='k', label='Callisto Fit')
 A_3.legend()
 
-f.tight_layout()
-f.savefig('PLOT1_4.png', dpi=800)
+F.tight_layout()
+F.savefig('PLOT1_4.png', dpi=800)
 plt.show()
 
 plt.close()
@@ -139,15 +139,15 @@ plt.savefig('PLOT2_4.png', dpi=800)
 plt.show()
 
 # determining the gradient of the straight line and the gradient error
-grad = coeffs[0]
-grad_error = np.sqrt(cov[0][0])
+gradient = coeffs[0]
+gradient_error = np.sqrt(cov[0][0])
 # defining the gravitational constant and real jupiter mass
 G = 6.6743e-11
 real_mass_jupiter =1.898e27
 # finding the mass of jupiter
-mass_jupiter = (4*(np.pi**2)*grad)/G
+mass_jupiter = (4*(np.pi**2)*gradient)/G
 # finding the error of the mass of jupiter calculation
-delta_mass_jupiter = np.sqrt(((4*(np.pi**2))/G)*(grad_error))
+delta_mass_jupiter = np.sqrt(((4*(np.pi**2))/G)*(gradient_error))
 precision_jupiter = abs(((mass_jupiter/real_mass_jupiter)-1)*100)
 # displaying the results
-print(f'The mass of jupiter was found to be: {jupiter_mass:.2E}kg ± {delta_mass_jupiter:.2E} with a precision of: {precision_jupiter:.2f}%')
+print(f'The mass of jupiter was found to be: {mass_jupiter:.2E}kg ± {delta_mass_jupiter:.2E} with a precision of: {precision_jupiter:.2f}%')
