@@ -140,14 +140,14 @@ plt.show()
 
 # determining the gradient of the straight line and the gradient error
 grad = coeffs[0]
-grad_err = np.sqrt(cov[0][0])
+grad_error = np.sqrt(cov[0][0])
 # defining the gravitational constant and real jupiter mass
 G = 6.6743e-11
-jupiter_real_mass =1.898e27
+real_mass_jupiter =1.898e27
 # finding the mass of jupiter
-jupiter_mass = (4*(np.pi**2)*grad)/G
+mass_jupiter = (4*(np.pi**2)*grad)/G
 # finding the error of the mass of jupiter calculation
-delta_jupiter_mass = np.sqrt(((4*(np.pi**2))/G)*(grad_err))
-jupiter_precision = abs(((jupiter_mass/jupiter_real_mass)-1)*100)
+delta_mass_jupiter = np.sqrt(((4*(np.pi**2))/G)*(grad_error))
+precision_jupiter = abs(((mass_jupiter/real_mass_jupiter)-1)*100)
 # displaying the results
-print(f'The mass of jupiter is: {jupiter_mass:.2E}kg ± {delta_jupiter_mass:.2E} an precision of {jupiter_precision:.2f}%')
+print(f'The mass of jupiter is: {jupiter_mass:.2E}kg ± {delta_mass_jupiter:.2E} an precision of {precision_jupiter:.2f}%')

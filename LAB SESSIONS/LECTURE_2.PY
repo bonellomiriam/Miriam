@@ -1,6 +1,6 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
-from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import PolynomialFeatures as pf
 from sklearn.linear_model import LinearRegression 
 from sklearn.metrics import mean_squared_error 
 import operator 
@@ -27,22 +27,16 @@ plt.grid(visible=True, which='major', linestyle='-')
 plt.grid(visible=True, which='minor', linestyle='--')
 plt.tight_layout()
 
-plt.scatter((data['Temperature/K']),(data['Luminosity(L/Lo)']), color = 'k')
+plt.scatter((data_1['Temperature/K']),(data_1['Luminosity(L/Lo)']), color = 'k')
 plt.savefig('PLOT1.png', dpi=800)
 
-plt.close()
-
-plt.scatter(np.log(data['Temperature/K']), np.log(data['Luminosity(L/Lo)']), color = 'k')
+plt.scatter(np.log(data_1['Temperature/K']), np.log(data_1['Luminosity(L/Lo)']), color = 'k')
 plt.savefig('PLOT2.png', dpi=800)
 
-plt.close()
-
 #to drop any of the unwanted values 
-value3 = data.mask(data['Star Type']!=3).dropna().reset_index()
+value3 = data_1.mask(data_1['Star type']!=3).dropna().reset_index()
 plt.scatter(np.log(value3['Temperature/K']), np.log(value3['Luminosity(L/Lo)']), color = 'k')
 plt.savefig('PLOT3.png', dpi=800)
-
-plt.close()
 
 #to get the log of the data needed 
 y = np.log(value3['Luminosity(L/Lo)'])
@@ -70,8 +64,6 @@ for i in freedom:
     x, y_predicted = zip(*sorted_zip)
     plt.plot(x, y_predicted, color='k')
     plt.savefig(f'PLOT4_{i}.png', dpi=800)
-
-    plt.close()
 
 #reading the filtered data 
 data_2 = pd.read_csv('Q2b__stars.csv')

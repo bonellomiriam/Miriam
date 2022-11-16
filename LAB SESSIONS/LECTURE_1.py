@@ -95,7 +95,7 @@ print(E, delta_E, T0, delta_T0)
 #obtaining a value for the residual 
 residual = np.subtract(y_i,trendline)
 
-f, (a0, a1) = plt.subplots(2, 1, sharex=True, sharey=False, gridspec_kw={'height_ratios': [3, 1]}, figsize=(7.3, 10.7))
+F, (A_0, A_1) = plt.subplots(2, 1, sharex=True, sharey=False, gridspec_kw={'height_ratios': [3, 1]}, figsize=(7.3, 10.7))
 
 #setting the font for the graph and setting the paraments to obtain the graphsa s one subplot 
 plt.rcParams['font.family'] = 'STIXGeneral'
@@ -103,22 +103,22 @@ plt.rcParams['mathtext.fontset'] = 'stix'
 plt.rcParams['font.size'] = 12
 plt.rcParams['font.weight'] = 'normal'
 
-a0.scatter(x_i, y_i, color='k', label='Data Points')
-a0.plot(x_i, trendline, color='k', label='Trendline')
-a0.minorticks_on()
-a0.grid(visible=True, which='major', linestyle='-')
-a0.grid(visible=True, which='minor', linestyle='--')
-a0.set_xlabel('Strain')
-a0.set_ylabel('Stress')
-a0.set_title('A graph of Stress vs Strain')
+A_0.scatter(x_i, y_i, color='k', label='Data Points')
+A_0.plot(x_i, trendline, color='k', label='Trendline')
+A_0.minorticks_on()
+A_0.grid(visible=True, which='major', linestyle='-')
+A_0.grid(visible=True, which='minor', linestyle='--')
+A_0.set_xlabel('Strain')
+A_0.set_ylabel('Stress')
+A_0.set_title('A graph showing Stress against Strain')
 
-a1.scatter(xi, residual, color='k')
-a1.minorticks_on()
-a1.grid(visible=True, which='major', linestyle='-')
-a1.grid(visible=True, which='minor', linestyle='--')
-a1.set_ylabel('Residuals')
-a1.set_xlabel('Strain')
-a1.set_title('A graph of Residuals vs Strain')
-f.tight_layout()
-f.savefig('Plot1.png', dpi=800)
-f.show()
+A_1.scatter(x_i, residual, color='k')
+A_1.minorticks_on()
+A_1.grid(visible=True, which='major', linestyle='-')
+A_1.grid(visible=True, which='minor', linestyle='--')
+A_1.set_ylabel('Residuals')
+A_1.set_xlabel('Strain')
+A_1.set_title('A graph showing the Residuals against Strain')
+F.tight_layout()
+F.savefig('PLOT1.png', dpi=800)
+F.show()
