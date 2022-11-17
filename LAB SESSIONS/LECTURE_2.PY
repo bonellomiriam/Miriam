@@ -110,5 +110,9 @@ plt.ylabel(r'$\frac{\mathrm{L}}{\mathrm{A}}$ /Wm$^{-2}$')
 plt.savefig('PLOT5_2.png', dpi=800)
 plt.show()
 
+# theoretical boltzmann constant
+theoretical_s = 5.6696e-8
+accurate_boltz = ((popt[0]/theoretical_s)-1)*100
+
 #to show the Boltzmann constant 
-print(f'Boltzmann constant = {popt[0]:.2E}')
+print(f'Boltzmann constant = {popt[0]:.2E}', 'with a precision of {accurate_boltz}')
