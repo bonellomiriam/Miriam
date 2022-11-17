@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import mean_squared_error
 from scipy.optimize import curve_fit
+from math import log 
 
 #creating the lists to be used later on
 index = []
