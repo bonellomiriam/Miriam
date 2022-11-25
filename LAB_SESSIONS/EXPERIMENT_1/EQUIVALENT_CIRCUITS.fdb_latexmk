@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber EQUIVALENT_CIRCUITS"] 0 "EQUIVALENT_CIRCUITS.bcf" "EQUIVALENT_CIRCUITS.bbl" "EQUIVALENT_CIRCUITS" 0
-  "EQUIVALENT_CIRCUITS.bcf" 0 -1 0 "pdflatex"
+["biber EQUIVALENT_CIRCUITS"] 1669409929 "EQUIVALENT_CIRCUITS.bcf" "EQUIVALENT_CIRCUITS.bbl" "EQUIVALENT_CIRCUITS" 1669410032
+  "EQUIVALENT_CIRCUITS.bcf" 1669410031 106635 faa3915f1b29eea1293e4ae56198f65f "pdflatex"
   (generated)
   "EQUIVALENT_CIRCUITS.bbl"
   "EQUIVALENT_CIRCUITS.blg"
-["pdflatex"] 1669325977 "c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex" "EQUIVALENT_CIRCUITS.pdf" "EQUIVALENT_CIRCUITS" 1669325977
-  "EQUIVALENT_CIRCUITS.aux" 1669325977 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "EQUIVALENT_CIRCUITS.bbl" 0 -1 0 "biber EQUIVALENT_CIRCUITS"
+["pdflatex"] 1669410024 "c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex" "EQUIVALENT_CIRCUITS.pdf" "EQUIVALENT_CIRCUITS" 1669410032
+  "EQUIVALENT_CIRCUITS.aux" 1669410031 730 0bbeaf46d53bf01777c972c50d8d91b0 "pdflatex"
+  "EQUIVALENT_CIRCUITS.bbl" 1669409943 486 ee04f40f768daeed26442158e95aba61 "biber EQUIVALENT_CIRCUITS"
   "EQUIVALENT_CIRCUITS.out" 0 -1 0 "pdflatex"
-  "EQUIVALENT_CIRCUITS.run.xml" 0 -1 0 "pdflatex"
-  "EQUIVALENT_CIRCUITS.tex" 1669325963 1063 3f113c21c56fb5b9716c4c458417d789 ""
-  "c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex" 1669325963 1063 3f113c21c56fb5b9716c4c458417d789 ""
+  "EQUIVALENT_CIRCUITS.run.xml" 1669410031 2410 3aec6dfd7cd9f40611e6a46a2eb3dcb9 "pdflatex"
+  "EQUIVALENT_CIRCUITS.tex" 1669410022 1061 3e0ad0184c6ff951954cef8f4e7fbdfd ""
+  "c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex" 1669410022 1061 3e0ad0184c6ff951954cef8f4e7fbdfd ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1653063506 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1653046732 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1653046732 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -110,7 +110,6 @@
   "c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def" 1653067159 1620 fb1c32b818f2058eca187e5c41dfae77 ""
   "c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty" 1653067159 6187 b27afc771af565d3a9ff1ca7d16d0d46 ""
   "c:/texlive/2022/texmf-dist/tex/latex/minted/minted.sty" 1653068238 47156 7304be18b5469336f22dc013f16ae5cc ""
-  "c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty" 1653070313 4087 636308456f60d2b31cbf97867db5708d ""
   "c:/texlive/2022/texmf-dist/tex/latex/ragged2e/ragged2e.sty" 1653071454 9244 53da791cc5f775633a8a852b08533fe2 ""
   "c:/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1653071567 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "c:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1653071640 9715 b051d5b493d9fe5f4bc251462d039e5f ""

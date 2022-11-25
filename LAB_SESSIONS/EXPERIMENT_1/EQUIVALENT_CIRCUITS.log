@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.23)  24 NOV 2022 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.23)  25 NOV 2022 22:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex"
-(c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex
+**"c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex"
+(c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-05-04> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -587,22 +587,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 runsystem(if not exist _minted-EQUIVALENT_CIRCUITS mkdir _minted-EQUIVALENT_CIRCUITS)...executed.
 
- (c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-Package: placeins 2005/04/18  v 2.2
-
-
-c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty:28: LaTeX Error: Unknown option `selection' for package `placeins'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 } 
-       % end of \@ifundefined
-The option `selection' was not declared in package `placeins', perhaps you
-misspelled its name. Try typing  <return>  to proceed.
-
-) (c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (c:/texlive/2022/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2021/12/15 v3.1 ragged2e Package
@@ -702,6 +687,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 27.
+ (./EQUIVALENT_CIRCUITS.out) (./EQUIVALENT_CIRCUITS.out)
 \@outlinefile=\write6
 \openout6 = `EQUIVALENT_CIRCUITS.out'.
 
@@ -716,11 +702,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `EQUIVALENT_CIRCUITS.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'EQUIVALENT_CIRCUITS.bbl' not found.
-
-No file EQUIVALENT_CIRCUITS.bbl.
+Package biblatex Info: ... file 'EQUIVALENT_CIRCUITS.bbl' found.
+ (./EQUIVALENT_CIRCUITS.bbl)
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -766,39 +752,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./EQUIVALENT_CIRCUITS.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `EQUIVALENT_CIRCUITS.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `EQUIVALENT_CIRCUITS.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                EQUIVALENT_CIRCUITS
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `EQUIVALENT_CIRCUITS.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'EQUIVALENT_CIRCUITS.run.xml'.
 \openout1 = `EQUIVALENT_CIRCUITS.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20863 strings out of 478300
- 374019 string characters out of 5849123
- 1117591 words of memory out of 5000000
- 38793 multiletter control sequences out of 15000+600000
+ 20837 strings out of 478300
+ 373362 string characters out of 5849123
+ 1117718 words of memory out of 5000000
+ 38765 multiletter control sequences out of 15000+600000
  473669 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,6n,77p,828b,801s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on EQUIVALENT_CIRCUITS.pdf (1 page, 43193 bytes).
+Output written on EQUIVALENT_CIRCUITS.pdf (1 page, 43054 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream

@@ -1,8 +1,8 @@
-PWD c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1
+PWD c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex
+INPUT c:/Users/Miriam Bonello/Documents/GitHub/Miriam/LAB_SESSIONS/EXPERIMENT_1/EQUIVALENT_CIRCUITS.tex
 OUTPUT EQUIVALENT_CIRCUITS.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -811,17 +811,6 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
-INPUT c:/texlive/2022/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT c:/texlive/2022/texmf-dist/tex/latex/tools/indentfirst.sty
@@ -897,12 +886,28 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT ./EQUIVALENT_CIRCUITS.out
+INPUT EQUIVALENT_CIRCUITS.out
+INPUT ./EQUIVALENT_CIRCUITS.out
+INPUT EQUIVALENT_CIRCUITS.out
+INPUT ./EQUIVALENT_CIRCUITS.out
+INPUT EQUIVALENT_CIRCUITS.out
+INPUT ./EQUIVALENT_CIRCUITS.out
+INPUT EQUIVALENT_CIRCUITS.out
+INPUT ./EQUIVALENT_CIRCUITS.out
+INPUT ./EQUIVALENT_CIRCUITS.out
 OUTPUT EQUIVALENT_CIRCUITS.out
 OUTPUT EQUIVALENT_CIRCUITS.pdf
 INPUT c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 OUTPUT EQUIVALENT_CIRCUITS.bcf
+INPUT EQUIVALENT_CIRCUITS.bbl
+INPUT ./EQUIVALENT_CIRCUITS.bbl
+INPUT EQUIVALENT_CIRCUITS.bbl
+INPUT ./EQUIVALENT_CIRCUITS.bbl
+INPUT ./EQUIVALENT_CIRCUITS.bbl
+INPUT EQUIVALENT_CIRCUITS.bbl
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
